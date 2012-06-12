@@ -133,6 +133,54 @@ JavaScript:
       99%      8
      100%   1014 (longest request)
      
+#### Golang:
+
+  $ go run server.go
+  
+  Document Path:          /
+  Document Length:        12 bytes
+
+  Concurrency Level:      100
+  Time taken for tests:   6.713 seconds
+  Complete requests:      100000
+  Failed requests:        0
+  Write errors:           0
+  Total transferred:      10901308 bytes
+  HTML transferred:       1200144 bytes
+  Requests per second:    14897.25 [#/sec] (mean)
+  Time per request:       6.713 [ms] (mean)
+  Time per request:       0.067 [ms] (mean, across all concurrent requests)
+  Transfer rate:          1585.93 [Kbytes/sec] received
+
+  Connection Times (ms)
+                min  mean[+/-sd] median   max
+  Connect:        0    2   0.9      2       5
+  Processing:     0    5   1.4      5      21
+  Waiting:        0    4   1.4      4      14
+  Total:          1    7   1.1      7      22
+
+  Percentage of the requests served within a certain time (ms)
+    50%      7
+    66%      7
+    75%      7
+    80%      7
+    90%      8
+    95%      8
+    98%     10
+    99%     10
+   100%     22 (longest request)
+   
+Notice: 
+Vertx version, Response Headers:
+    Content-Length:12
+    
+
+Golang version, Response Headers:
+
+    Content-Type:text/plain; charset=utf-8
+    Date:Tue, 12 Jun 2012 12:43:17 GMT
+    Transfer-Encoding:chunked
+
 
      
 
