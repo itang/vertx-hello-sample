@@ -1,15 +1,17 @@
 package main
 
-import "io"
-import "net/http"
-import "runtime"
+import (
+	"io"
+	"net/http"
+	"runtime"
+)
 
 func handler(resp http.ResponseWriter, req *http.Request) {
-  io.WriteString(resp, "Hello World!")
+	io.WriteString(resp, "Hello World! (go)")
 }
 
 func main() {
 	runtime.GOMAXPROCS(4)
-  http.HandleFunc("/", handler)
-  http.ListenAndServe(":8080", nil)
+	http.HandleFunc("/", handler)
+	http.ListenAndServe(":8080", nil)
 }
