@@ -22,49 +22,46 @@ JavaScript:
 
 ### ab test result:
 
-    ab -n 100000 -c 100 http://localhost:8080/
+    ab -n 1000000 -c 100 -k http://localhost:8080/
 
 
 #### Java:
-    Server Hostname:        localhost
-    Server Port:            8080
 
     Document Path:          /
-    Document Length:        12 bytes
+    Document Length:        19 bytes
 
     Concurrency Level:      100
-    Time taken for tests:   6.187 seconds
-    Complete requests:      100000
+    Time taken for tests:   10.186 seconds
+    Complete requests:      1000000
     Failed requests:        0
     Write errors:           0
-    Total transferred:      5101683 bytes
-    HTML transferred:       1200396 bytes
-    Requests per second:    16163.82 [#/sec] (mean)
-    Time per request:       6.187 [ms] (mean)
-    Time per request:       0.062 [ms] (mean, across all concurrent requests)
-    Transfer rate:          805.30 [Kbytes/sec] received
+    Keep-Alive requests:    1000000
+    Total transferred:      82000000 bytes
+    HTML transferred:       19000000 bytes
+    Requests per second:    98169.16 [#/sec] (mean)
+    Time per request:       1.019 [ms] (mean)
+    Time per request:       0.010 [ms] (mean, across all concurrent requests)
+    Transfer rate:          7861.20 [Kbytes/sec] received
 
     Connection Times (ms)
-                  min  mean[+/-sd] median   max
-    Connect:        0    3  35.0      2    1005
-    Processing:     0    3   2.7      3     207
-    Waiting:        0    2   2.6      2     207
-    Total:          0    6  35.1      5    1010
+    min  mean[+/-sd] median   max
+    Connect:        0    0   0.0      0       6
+    Processing:     0    1   1.5      1      25
+    Waiting:        0    1   1.5      1      25
+    Total:          0    1   1.5      1      25
 
     Percentage of the requests served within a certain time (ms)
-      50%      5
-      66%      6
-      75%      6
-      80%      6
-      90%      7
-      95%      7
-      98%      8
-      99%      9
-     100%   1010 (longest request)
+    50%      1
+    66%      1
+    75%      1
+    80%      1
+    90%      1
+    95%      2
+    98%      6
+    99%     10
+    100%     25 (longest request)
 
-
-
-#### Ruby:
+#### Ruby: (outdated)
 
     Server Software:
     Server Hostname:        localhost
@@ -105,83 +102,91 @@ JavaScript:
 
 #### JavaScript:
 
-    Document Length:        12 bytes
+    Document Path:          /
+    Document Length:        17 bytes
 
     Concurrency Level:      100
-    Time taken for tests:   6.396 seconds
-    Complete requests:      100000
+    Time taken for tests:   20.273 seconds
+    Complete requests:      1000000
     Failed requests:        0
     Write errors:           0
-    Total transferred:      5100816 bytes
-    HTML transferred:       1200192 bytes
-    Requests per second:    15634.95 [#/sec] (mean)
-    Time per request:       6.396 [ms] (mean)
-    Time per request:       0.064 [ms] (mean, across all concurrent requests)
-    Transfer rate:          778.82 [Kbytes/sec] received
+    Keep-Alive requests:    1000000
+    Total transferred:      80000000 bytes
+    HTML transferred:       17000000 bytes
+    Requests per second:    49326.54 [#/sec] (mean)
+    Time per request:       2.027 [ms] (mean)
+    Time per request:       0.020 [ms] (mean, across all concurrent requests)
+    Transfer rate:          3853.64 [Kbytes/sec] received
 
     Connection Times (ms)
-                  min  mean[+/-sd] median   max
-    Connect:        0    4  43.6      2    1004
-    Processing:     0    3   2.6      2     211
-    Waiting:        0    2   2.6      2     210
-    Total:          0    6  43.7      4    1014
+    min  mean[+/-sd] median   max
+    Connect:        0    0   0.0      0       7
+    Processing:     0    2   1.7      1      56
+    Waiting:        0    2   1.7      1      56
+    Total:          0    2   1.7      1      57
 
     Percentage of the requests served within a certain time (ms)
-      50%      4
-      66%      4
-      75%      5
-      80%      5
-      90%      6
-      95%      7
-      98%      7
-      99%      8
-     100%   1014 (longest request)
+    50%      1
+    66%      2
+    75%      2
+    80%      2
+    90%      3
+    95%      6
+    98%      6
+    99%      9
+    100%     57 (longest request)
+
 
 #### Golang:
 
+  $ go version
+
+    go version go1.1.1 linux/amd64
+
   $ go run server.go
 
-      Document Path:          /
-      Document Length:        12 bytes
+    Document Length:        17 bytes
 
-      Concurrency Level:      100
-      Time taken for tests:   6.713 seconds
-      Complete requests:      100000
-      Failed requests:        0
-      Write errors:           0
-      Total transferred:      10901308 bytes
-      HTML transferred:       1200144 bytes
-      Requests per second:    14897.25 [#/sec] (mean)
-      Time per request:       6.713 [ms] (mean)
-      Time per request:       0.067 [ms] (mean, across all concurrent requests)
-      Transfer rate:          1585.93 [Kbytes/sec] received
+    Concurrency Level:      100
+    Time taken for tests:   15.109 seconds
+    Complete requests:      1000000
+    Failed requests:        0
+    Write errors:           0
+    Keep-Alive requests:    1000000
+    Total transferred:      158000000 bytes
+    HTML transferred:       17000000 bytes
+    Requests per second:    66184.69 [#/sec] (mean)
+    Time per request:       1.511 [ms] (mean)
+    Time per request:       0.015 [ms] (mean, across all concurrent requests)
+    Transfer rate:          10212.09 [Kbytes/sec] received
 
-      Connection Times (ms)
-                    min  mean[+/-sd] median   max
-      Connect:        0    2   0.9      2       5
-      Processing:     0    5   1.4      5      21
-      Waiting:        0    4   1.4      4      14
-      Total:          1    7   1.1      7      22
+    Connection Times (ms)
+    min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0      11
+    Processing:     0    2   1.1      1      27
+    Waiting:        0    2   1.1      1      27
+    Total:          0    2   1.1      1      27
 
-      Percentage of the requests served within a certain time (ms)
-        50%      7
-        66%      7
-        75%      7
-        80%      7
-        90%      8
-        95%      8
-        98%     10
-        99%     10
-       100%     22 (longest request)
+    Percentage of the requests served within a certain time (ms)
+    50%      1
+    66%      2
+    75%      2
+    80%      2
+    90%      3
+    95%      3
+    98%      4
+    99%      5
+    100%     27 (longest request)
+
 
 Notice:
 Vertx version, Response Headers:
 
-    Content-Length:12
+    Content-Length:19
 
 
 Golang version, Response Headers:
 
-    Content-Type:text/plain; charset=utf-8
-    Date:Tue, 12 Jun 2012 12:43:17 GMT
-    Transfer-Encoding:chunked
+    Content-Type: text/plain; charset=utf-8
+    Content-Length: 17
+    Date: Thu, 18 Jul 2013 12:59:05 GMT
