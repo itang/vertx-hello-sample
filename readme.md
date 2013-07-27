@@ -61,44 +61,40 @@ JavaScript:
     99%     10
     100%     25 (longest request)
 
-#### Ruby: (outdated)
+#### Ruby:
 
-    Server Software:
-    Server Hostname:        localhost
-    Server Port:            8080
-
-    Document Path:          /
-    Document Length:        12 bytes
+    Document Length:        19 bytes
 
     Concurrency Level:      100
-    Time taken for tests:   6.429 seconds
-    Complete requests:      100000
+    Time taken for tests:   16.704 seconds
+    Complete requests:      1000000
     Failed requests:        0
     Write errors:           0
-    Total transferred:      5101377 bytes
-    HTML transferred:       1200324 bytes
-    Requests per second:    15553.42 [#/sec] (mean)
-    Time per request:       6.429 [ms] (mean)
-    Time per request:       0.064 [ms] (mean, across all concurrent requests)
-    Transfer rate:          774.84 [Kbytes/sec] received
+    Keep-Alive requests:    1000000
+    Total transferred:      82000000 bytes
+    HTML transferred:       19000000 bytes
+    Requests per second:    59864.18 [#/sec] (mean)
+    Time per request:       1.670 [ms] (mean)
+    Time per request:       0.017 [ms] (mean, across all concurrent requests)
+    Transfer rate:          4793.81 [Kbytes/sec] received
 
     Connection Times (ms)
-                  min  mean[+/-sd] median   max
-    Connect:        0    3  39.8      2    1006
-    Processing:     0    3   3.0      3     210
-    Waiting:        0    2   3.0      2     210
-    Total:          0    6  39.9      4    1012
+    min  mean[+/-sd] median   max
+    Connect:        0    0   0.1      0       9
+    Processing:     0    2   3.0      1      97
+    Waiting:        0    2   3.0      1      97
+    Total:          0    2   3.0      1      97
 
     Percentage of the requests served within a certain time (ms)
-      50%      4
-      66%      5
-      75%      6
-      80%      6
-      90%      7
-      95%      7
-      98%      8
-      99%     10
-     100%   1012 (longest request)
+    50%      1
+    66%      1
+    75%      1
+    80%      2
+    90%      2
+    95%      4
+    98%      8
+    99%     13
+    100%     97 (longest request)
 
 #### JavaScript:
 
