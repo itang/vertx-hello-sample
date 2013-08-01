@@ -20,6 +20,10 @@ JavaScript:
 
     $ vertx run server.js -instances 4
 
+Clojure:
+
+    $ vertx run server.clj -instances 4
+
 ### ab test result:
 
     ab -n 1000000 -c 100 -k http://localhost:8080/
