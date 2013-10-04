@@ -1,11 +1,11 @@
-import jester, strtabs
+import jester, strtabs, sockets
 #import htmlgen
 #import asyncio
 
 get "/":
   resp "Hello world! (from Nimrod)"
 
-run()
+run(port = TPort(8080))
 
 #var d: PDispatcher = newDispatcher()
 #d.register(http = false)

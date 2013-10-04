@@ -214,8 +214,57 @@ Clojure:
     99%      5
     100%     27 (longest request)
 
+#### Nimrod + Jester
 
-Notice:
+  $ nimrod -v
+
+    Nimrod Compiler Version 0.9.3 (2013-09-23) [Linux: amd64]
+    Copyright (c) 2004-2013 by Andreas Rumpf
+
+  jester version: "0.1.0"
+
+  $ ./run-nimrod.sh 
+
+    Document Path:          /
+    Document Length:        28 bytes
+
+    Concurrency Level:      100
+    Time taken for tests:   49.820 seconds
+    Complete requests:      1000000
+    Failed requests:        0
+    Write errors:           0
+    Keep-Alive requests:    0
+    Total transferred:      72000000 bytes
+    HTML transferred:       28000000 bytes
+    Requests per second:    20072.29 [#/sec] (mean)
+    Time per request:       4.982 [ms] (mean)
+    Time per request:       0.050 [ms] (mean, across all concurrent requests)
+    Transfer rate:          1411.33 [Kbytes/sec] received
+
+    Connection Times (ms)
+                  min  mean[+/-sd] median   max
+    Connect:        0    2   0.5      2       9
+    Processing:     1    3   0.7      3      14
+    Waiting:        0    2   0.7      3      14
+    Total:          2    5   0.9      5      14
+    WARNING: The median and mean for the waiting time are not within a normal deviation
+            These results are probably not that reliable.
+
+    Percentage of the requests served within a certain time (ms)
+      50%      5
+      66%      5
+      75%      6
+      80%      6
+      90%      6
+      95%      6
+      98%      6
+      99%      7
+     100%     14 (longest request)
+
+
+
+### Notice:
+
 Vertx version, Response Headers:
 
     Content-Length:19
